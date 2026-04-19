@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: var(--font-sans), system-ui, sans-serif;
+    --font-playfair: var(--font-serif), Georgia, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  html::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  section[id] {
+    scroll-margin-top: 72px;
+  }
+
+  body {
+    font-family: var(--font-inter);
+    color: #0a1628;
+    background-color: #ffffff;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-playfair);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+/* Clockwise border-draw loop animation */
+@keyframes border-top {
+  0%, 100% { width: 0%; }
+  15%       { width: 100%; }
+  85%       { width: 100%; }
+  99%       { width: 0%; }
+}
+@keyframes border-right {
+  0%, 25%, 100% { height: 0%; }
+  40%           { height: 100%; }
+  85%           { height: 100%; }
+  99%           { height: 0%; }
+}
+@keyframes border-bottom {
+  0%, 50%, 100% { width: 0%; }
+  65%           { width: 100%; }
+  85%           { width: 100%; }
+  99%           { width: 0%; }
+}
+@keyframes border-left {
+  0%, 75%, 100% { height: 0%; }
+  90%           { height: 100%; }
+  99%           { height: 100%; }
+}
+
+.animate-border-top    { animation: border-top    2.4s linear infinite; }
+.animate-border-right  { animation: border-right  2.4s linear infinite; }
+.animate-border-bottom { animation: border-bottom 2.4s linear infinite; }
+.animate-border-left   { animation: border-left   2.4s linear infinite; }
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-playfair);
+  }
+
+  .font-sans {
+    font-family: var(--font-inter);
+  }
+}
