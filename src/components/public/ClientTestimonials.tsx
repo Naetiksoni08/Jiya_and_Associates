@@ -10,6 +10,12 @@ const row1 = [
   {
     text: "Support from Jiya & Associates in navigating regulatory compliance proved extremely valuable. Their structured and detail-oriented approach ensured that all requirements were addressed without unnecessary complexity.",
   },
+  {
+    text: "We got our trademark registered through Jiya & Associates, and the entire process was handled very efficiently. They explained the stages clearly, kept us updated on timelines and ensured that there were no unnecessary delays. What stood out was their clarity and the ease with which everything was managed.",
+  },
+  {
+    text: "Before finalising a property purchase, we had the documents reviewed by Jiya & Associates. They conducted a thorough due diligence and highlighted issues we would not have been able to identify on our own. Their inputs gave us the confidence to proceed with clarity and avoid potential complications.",
+  },
 ];
 
 const row2 = [
@@ -18,6 +24,15 @@ const row2 = [
   },
   {
     text: "The team at Jiya & Associates demonstrated a thorough understanding of our sector. Their guidance on compliance and structuring was clear, considered and aligned with both our immediate needs and long-term direction.",
+  },
+  {
+    text: "We required guidance on compliance for our online business operations. Jiya & Associates provided practical and well-structured advice that was easy to understand and implement. Their approach ensured that we were fully compliant without overcomplicating the process.",
+  },
+  {
+    text: "While setting up our business, Ravi and his team assisted us with structuring and documentation. The process was handled smoothly, and their advice was aligned with our long-term plans rather than just immediate requirements. It made a noticeable difference in how we approached the setup.",
+  },
+  {
+    text: "We had multiple agreements drafted and reviewed by Jiya & Associates. The level of detail and clarity that Ravi and Keshav put in the documents was impressive, and they ensured that our interests were well-protected. Their ability to anticipate potential issues and address them upfront was particularly valuable.",
   },
 ];
 

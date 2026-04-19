@@ -41,7 +41,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             href="/services"
             className="inline-flex items-center gap-2 text-white/40 hover:text-gold text-sm mb-8 transition-colors duration-200"
           >
-            <ArrowLeft size={14} /> Back to Expertise
+            <ArrowLeft size={14} /> Back to All Areas
           </Link>
           <p className="text-gold text-xs font-semibold tracking-[0.3em] uppercase mb-3">
             Our Expertise

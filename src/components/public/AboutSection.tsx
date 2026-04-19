@@ -86,7 +86,7 @@ export default function AboutSection() {
 
         {/* Header */}
         <p
-          className="text-gold text-md font-semibold tracking-[0.3em] uppercase mb-4"
+          className="text-gold text-xs md:text-sm font-semibold tracking-[0.3em] uppercase mb-4"
         >
           In Practice
         </p>

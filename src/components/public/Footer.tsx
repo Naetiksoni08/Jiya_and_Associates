@@ -41,9 +41,9 @@ export default function Footer() {
             >
               <div className="flex items-center gap-3 mb-4">
                 <Image src="/images/jiya.png" alt="Jiya & Associates" width={60} height={60} className="object-contain" />
-                <span className="font-serif text-2xl font-bold">Jiya &amp; Associates</span>
+                <span className="font-serif text-2xl font-bold uppercase">Jiya &amp; Associates</span>
               </div>
-              <p className="text-cream/55 text-base leading-loose max-w-md">
+              <p className="text-cream/55 text-base leading-loose max-w-md text-justify">
                 Approaching legal advisory with structure and intent — bringing clarity to regulatory and transactional complexities, and guiding decisions with precision and foresight, to ensure outcomes that are both practical and sound.
               </p>
             </motion.div>

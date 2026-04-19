@@ -21,7 +21,7 @@ export default function TrustedPartnership() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-[#B8973A] font-inter text-sm tracking-[0.25em] uppercase mb-5"
+          className="text-[#B8973A] font-inter text-xs md:text-sm font-semibold tracking-[0.3em] uppercase mb-5"
         >
           Trusted Legal Partnership
         </motion.p>
@@ -44,11 +44,10 @@ export default function TrustedPartnership() {
           className="space-y-4 mb-10"
         >
           <p className="font-inter text-white/60 text-base leading-relaxed">
-            Legal matters often require both dispute resolution and regulatory or advisory support.
-            To facilitate this, Stratum Juris works alongside its associated advisory practice<br></br>{" "}
-            <span className="text-[#B8973A] font-bold mt-10 whitespace-nowrap text-md">
-              STRATUM JURIS — ADVOCATES & SOLICITORS
-            </span>
+            Legal matters often require both strategic advisory and effective dispute resolution. Jiya &amp; Associates operates in structured alignment with its associated litigation practice. This ensures continuity from legal advice to courtroom representation. Clients benefit from a seamless and coordinated legal approach.
+          </p>
+          <p className="text-[#B8973A] font-bold whitespace-nowrap text-base">
+            STRATUM JURIS — ADVOCATES &amp; SOLICITORS
           </p>
           <p className="font-inter text-white/60 text-base leading-relaxed">
             This framework brings together regulatory, taxation and corporate expertise along with litigation and dispute resolution tactics.
@@ -74,12 +73,6 @@ export default function TrustedPartnership() {
           </a>
         </motion.div>
 
-        {/* Ornamental divider */}
-        <div className="flex items-center gap-3 mt-14 w-full">
-          <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, transparent, #B8973A44)" }} />
-          <div className="w-1.5 h-1.5 rounded-full bg-[#B8973A] flex-shrink-0" />
-          <div className="flex-1 h-px" style={{ background: "linear-gradient(to left, transparent, #B8973A44)" }} />
-        </div>
       </div>
     </section>
   );

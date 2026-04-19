@@ -17,13 +17,6 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.55, ease: "easeOut", delay },
 });
 
-const Divider = () => (
-  <div className="flex items-center gap-4 px-12">
-    <div className="flex-1 h-px bg-gradient-to-r from-transparent to-gold/40" />
-    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-    <div className="flex-1 h-px bg-gradient-to-l from-transparent to-gold/40" />
-  </div>
-);
 
 export default function AboutPage() {
   return (

@@ -18,13 +18,6 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-const Divider = () => (
-  <div className="flex items-center gap-4 my-0">
-    <div className="flex-1 h-px bg-gradient-to-r from-transparent to-gold/40" />
-    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-    <div className="flex-1 h-px bg-gradient-to-l from-transparent to-gold/40" />
-  </div>
-);
 
 export default function MemberProfilePage({ params }: { params: { slug: string } }) {
   const member = getMemberBySlug(params.slug);
@@ -35,8 +28,14 @@ export default function MemberProfilePage({ params }: { params: { slug: string }
       <Navbar />
 
       {/* Hero band */}
-      <div className="bg-navy pt-32 pb-16 px-6">
-        <div className="max-w-4xl mx-auto">
+      <div className="relative bg-navy pt-32 pb-16 px-6 overflow-hidden">
+        {/* Grid lines */}
+        <div className="absolute inset-0" style={{
+          backgroundImage: "linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }} />
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%)" }} />
+        <div className="max-w-4xl mx-auto relative z-10">
           <Link
             href="/team"
             className="inline-flex items-center gap-2 text-white/40 hover:text-gold text-sm mb-8 transition-colors duration-200"
@@ -49,6 +48,7 @@ export default function MemberProfilePage({ params }: { params: { slug: string }
           <h1 className="font-serif text-4xl md:text-5xl text-white font-bold leading-tight">
             {member.name}
           </h1>
+          <div className="w-12 h-[2px] bg-gold mt-4" />
         </div>
       </div>
 
@@ -119,9 +119,6 @@ export default function MemberProfilePage({ params }: { params: { slug: string }
                 </div>
               ))}
             </div>
-            <div className="mt-12">
-              <Divider />
-            </div>
           </div>
         </section>
       )}
@@ -140,10 +137,7 @@ export default function MemberProfilePage({ params }: { params: { slug: string }
             <p className="text-navy/65 text-base md:text-lg leading-relaxed text-justify">
               {member.practiceSection.para}
             </p>
-            <div className="mt-16">
-              <Divider />
             </div>
-          </div>
         </section>
       )}
 

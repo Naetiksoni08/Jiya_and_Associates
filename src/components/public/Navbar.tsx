@@ -31,6 +31,7 @@ export default function Navbar() {
   }, []);
 
   return (
+    <>
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
@@ -137,7 +138,9 @@ export default function Navbar() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/35 to-transparent" />
       )}
 
-      {/* Mobile menu — full-screen overlay */}
+    </header>
+
+      {/* Mobile menu — full-screen overlay, outside header to avoid backdrop-blur clipping */}
       {mobileOpen && (
         <div className="md:hidden fixed inset-0 z-50 bg-white flex flex-col">
           {/* Header row inside overlay */}
@@ -183,6 +186,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }

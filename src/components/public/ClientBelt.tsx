@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const logos = [
+const logos: { name: string; src: string; scale?: string }[] = [
   { name: "POSCO Group", src: "/images/clients/posco.png" },
   { name: "Sumikin Bussan", src: "/images/clients/sumikin.jpeg" },
   { name: "Adeka India", src: "/images/clients/adeka.png" },
@@ -17,12 +17,13 @@ const logos = [
   { name: "GD Goenka", src: "/images/clients/gdgoneka.jpg" },
   { name: "Vidya Jain School", src: "/images/clients/vidyajain.webp" },
   { name: "AKG India", src: "/images/clients/akg.jpg" },
+  { name: "Nippon", src: "/images/clients/nippon.jpeg", scale: "1.5" },
 ];
 
 export default function ClientBelt() {
   return (
     <div className="bg-white py-10 overflow-hidden border-y border-gray-100">
-      <p className="text-center text-md tracking-[0.3em] uppercase text-gold font-bold mb-8">
+      <p className="text-center text-xs tracking-[0.3em] uppercase text-gold font-semibold mb-8">
         Clients &amp; Associations
       </p>
       <div className="relative flex">
@@ -41,6 +42,7 @@ export default function ClientBelt() {
                   width={220}
                   height={110}
                   className="object-contain max-h-24 w-auto"
+                  style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
                 />
               </div>
             ))}

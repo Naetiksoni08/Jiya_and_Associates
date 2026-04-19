@@ -46,30 +46,21 @@ export const team: TeamMember[] = [
         ],
       },
       {
+        category: "Manufacturing & Industrial Enterprises",
+        description:
+          "Handling tax and compliance functions for manufacturing entities, with emphasis on operational structuring and regulatory adherence across business cycles.",
+        clients: [
+          { name: "AKG India Pvt. Ltd.", logo: "/images/clients/akg.jpg" },
+          { name: "Nippon", logo: "/images/clients/nippon.jpeg" },
+        ],
+      },
+      {
         category: "Infrastructure, Hospitality & Real Estate",
         description:
           "Supporting businesses in capital-intensive sectors on regulatory navigation, project structuring and compliance systems essential for large-scale operations.",
         clients: [
           { name: "Pride Hotels Ltd.", logo: "/images/clients/pride.jpg" },
           { name: "Apex Group", logo: "/images/clients/apex.png" },
-        ],
-      },
-      {
-        category: "Media & Entertainment",
-        description:
-          "Assisting digital and media-driven businesses in managing evolving compliance requirements, transactional structuring and regulatory alignment in dynamic markets.",
-        clients: [
-          { name: "Chokas Media Pvt. Ltd.", logo: "/images/clients/chokas.jpg" },
-          { name: "Airnet Digital Solutions", logo: "/images/clients/aritel.png" },
-        ],
-      },
-      {
-        category: "Consumer, Financial & Growth Enterprises",
-        description:
-          "Advising new-age businesses to streamline tax exposure, build compliant structures and align legal frameworks with growth trajectories.",
-        clients: [
-          { name: "Bombay Shaving Company", logo: "/images/clients/bombay.png" },
-          { name: "Moneyboxx Finance Ltd.", logo: "/images/clients/moneybox.png" },
         ],
       },
       {
@@ -82,10 +73,22 @@ export const team: TeamMember[] = [
         ],
       },
       {
-        category: "Manufacturing & Industrial Enterprises",
+        category: "Consumer, Financial & Growth Enterprises",
         description:
-          "Handling tax and compliance functions for manufacturing entities, with emphasis on operational structuring and regulatory adherence across business cycles.",
-        clients: [{ name: "AKG India Pvt. Ltd.", logo: "/images/clients/akg.jpg" }],
+          "Advising new-age businesses to streamline tax exposure, build compliant structures and align legal frameworks with growth trajectories.",
+        clients: [
+          { name: "Bombay Shaving Company", logo: "/images/clients/bombay.png" },
+          { name: "Moneyboxx Finance Ltd.", logo: "/images/clients/moneybox.png" },
+        ],
+      },
+      {
+        category: "Media & Entertainment",
+        description:
+          "Assisting digital and media-driven businesses in managing evolving compliance requirements, transactional structuring and regulatory alignment in dynamic markets.",
+        clients: [
+          { name: "Chokas Media Pvt. Ltd.", logo: "/images/clients/chokas.jpg" },
+          { name: "Airnet Digital Solutions", logo: "/images/clients/aritel.png" },
+        ],
       },
     ],
     standing:

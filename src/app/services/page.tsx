@@ -33,7 +33,7 @@ export default function ServicesPage() {
             What We Do
           </p>
           <h1 className="font-serif text-4xl md:text-5xl text-white font-bold">
-            Our Expertise
+            Areas of Expertise
           </h1>
         </div>
       </div>

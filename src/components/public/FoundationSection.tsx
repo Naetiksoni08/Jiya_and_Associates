@@ -22,7 +22,7 @@ export default function FoundationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.15 }}
           transition={{ duration: 0.5 }}
-          className="text-gold text-md font-semibold tracking-[0.3em] uppercase mb-4"
+          className="text-gold text-xs md:text-sm font-semibold tracking-[0.3em] uppercase mb-4"
         >
           The Framework
         </motion.p>
@@ -42,7 +42,8 @@ export default function FoundationSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.15 }}
           transition={{ duration: 0.65, ease: "easeOut", delay: 0.1 }}
-          className="text-white/90 text-base md:text-lg leading-relaxed mb-20"
+          className="text-white/90 text-base md:text-lg leading-relaxed mb-20 text-justify"
+          style={{ textAlignLast: "center" }}
         >
           At Jiya &amp; Associates, every case we handle is backed by years of accumulated expertise.
           Our legacy is built on trust, precision, and an unwavering commitment to our clients. With

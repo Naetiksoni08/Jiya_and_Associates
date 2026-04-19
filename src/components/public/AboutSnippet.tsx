@@ -9,7 +9,7 @@ const stats = [
   { num: 25,  suffix: "+",  label: "Years of\nExcellence" },
   { num: 500, suffix: "+",  label: "Matters\nAdvised" },
   { num: 6,   suffix: "",   label: "Core Practice\nAreas" },
-  { num: 2,   suffix: "",   label: "Branches \nof\nExpertise" },
+  { num: 2,   suffix: "",   label: "Branches of\n Expertise" },  
 ];
 
 function CountUp({ target, suffix, active }: { target: number; suffix: string; active: boolean }) {
@@ -47,7 +47,7 @@ export default function AboutSnippet() {
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <p className="text-gold  text-md font-semibold tracking-[0.3em] uppercase mb-5">
+            <p className="text-gold text-xs md:text-sm font-semibold tracking-[0.3em] uppercase mb-5">
               About Us
             </p>
 

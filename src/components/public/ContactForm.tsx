@@ -144,10 +144,9 @@ export default function ContactForm() {
                 </svg>
                 <div>
                   <p className="font-sans font-bold text-xs tracking-widest text-navy uppercase mb-2">Telephone</p>
-                  <div className="flex items-center gap-1 cursor-pointer group/tel">
-                    <a href="tel:+919811251825" className="text-navy/55 text-sm group-hover/tel:text-gold transition-colors">9811251825</a>
-                    <span className="text-navy/40 text-sm group-hover/tel:text-gold transition-colors">&amp;</span>
-                    <a href="tel:+919315413745" className="text-navy/55 text-sm group-hover/tel:text-gold transition-colors">9315413745</a>
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+919811251825" className="text-navy/55 text-sm hover:text-gold transition-colors">+91-9811251825</a>
+                    <a href="tel:+919315413745" className="text-navy/55 text-sm hover:text-gold transition-colors">+91-9315413745</a>
                   </div>
                 </div>
               </div>

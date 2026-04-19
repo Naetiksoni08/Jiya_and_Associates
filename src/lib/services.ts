@@ -24,7 +24,7 @@ export const services: Service[] = [
       {
         heading: "Commercial Contracts & Documentation",
         paragraphs: [
-          "Drafting, review and structuring of commercial agreements form a core part of the practice. This includes Master Service Agreements (MSAs), service agreements, vendor and supplier contracts, franchise agreements, joint venture agreements, shareholders' agreements, partnership deeds, non-disclosure agreements (NDAs) and other business arrangements.",
+          "Drafting, review and structuring of commercial agreements form a core part of the practice. This includes Master Service Agreements (MSAs), vendor and supplier contracts, franchise agreements, joint venture agreements, shareholders' agreements, partnership deeds, non-disclosure agreements (NDAs) and other business arrangements.",
           "Documentation is prepared with a clear understanding of rights, obligations and risk allocation, ensuring that the terms remain workable and aligned with the intent of the parties.",
         ],
       },
@@ -52,7 +52,7 @@ export const services: Service[] = [
       {
         heading: "Non-Profit & Institutional Structuring",
         paragraphs: [
-          "Assistance is provided in the registration of societies, trusts and Section 8 companies, including the formation and establishment of charitable institutions, foundations and resident welfare associations (RWAs).",
+          "Assistance is provided in the registration of societies, trusts and Section 8 companies, including the formation and establishment of charitable institutions, foundations and Resident Welfare Associations (RWAs).",
           "Support extends to structuring, documentation and regulatory compliance applicable to such entities, ensuring that operations are aligned with applicable legal and statutory requirements from the outset.",
         ],
       },
@@ -63,8 +63,8 @@ export const services: Service[] = [
     title: "Regulatory Compliance",
     brief: "Ongoing support to meet statutory and regulatory requirements.",
     intro: [
-      "Where commercial arrangements lead to disputes, assistance is provided in evaluating contractual positions and determining the appropriate course of action. This includes matters relating to breach of contract, recovery proceedings and enforcement of contractual rights.",
-      "Support is extended in preparing claims, responses and related documentation, ensuring that the commercial position remains clearly articulated and protected.",
+      "Regulatory compliance requires a clear understanding of applicable legal frameworks and ongoing adherence to statutory obligations. Jiya & Associates assists businesses in identifying relevant compliance requirements, structuring processes accordingly and ensuring timely filings under applicable laws.",
+      "Support extends to advisory on regulatory exposure, preparation and review of documentation, and maintaining compliance systems that align with the operational and commercial realities of the business.",
     ],
     sections: [
       {
@@ -139,7 +139,7 @@ export const services: Service[] = [
   {
     slug: "intellectual-property-law",
     title: "Intellectual Property Law",
-    brief: "Registration and protection of intellectual property rights, including trademarks.",
+    brief: "Registration and protection of intellectual property rights.",
     intro: [
       "Intellectual property matters are handled with a focus on securing and protecting rights arising from creation, use and commercial identity. Jiya & Associates assists clients in safeguarding their intellectual assets through trademark registration in India, advisory and enforcement measures.",
       "The practice covers brand name registration, logo protection and related rights, ensuring that ownership and usage are clearly established and legally protected.",
