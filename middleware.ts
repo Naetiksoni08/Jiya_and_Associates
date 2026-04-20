@@ -4,9 +4,15 @@ import { NextRequest, NextResponse } from "next/server";
 // We check cookie existence here for UX redirect; actual JWT verification
 // happens in each API route (which runs in Node.js runtime).
 export function middleware(request: NextRequest) {
-  console.log("ADMIN_PATH:", process.env.ADMIN_PATH);
   const { pathname } = request.nextUrl;
   const ADMIN_PATH = process.env.ADMIN_PATH!;
+
+  // Maintenance mode — set MAINTENANCE_MODE=true in Vercel env vars to enable
+  if (process.env.MAINTENANCE_MODE === "true") {
+    if (pathname !== "/maintenance" && !pathname.startsWith(`/${ADMIN_PATH}`)) {
+      return NextResponse.redirect(new URL("/maintenance", request.url));
+    }
+  }
 
   // Rule 1: /admin always returns 404
   if (pathname === "/admin" || pathname.startsWith("/admin/")) {
