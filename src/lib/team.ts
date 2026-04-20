@@ -26,7 +26,7 @@ export const team: TeamMember[] = [
     name: "Ravi Prakash Verma",
     designation: "Founder & Managing Partner",
     tagline: "25+ years across tax advisory, regulatory strategy and institutional compliance.",
-    photo: undefined,
+    photo: "/images/team/founder.JPG.jpeg",
     bio: [
       "Ravi Prakash Verma is the Founder of Jiya & Associates and brings over two decades of experience in tax advisory, regulatory strategy and institutional compliance. His practice has been shaped by long-standing client relationships and a consistent track record of advising on complex, high-value matters across sectors.",
       "He is regularly engaged by multinational corporations, Indian enterprises and financial institutions on issues involving tax structuring, cross-border positioning, regulatory approvals and ongoing compliance. His advisory is marked by clarity of approach, commercial awareness and the ability to anticipate regulatory exposure before it materialises.",

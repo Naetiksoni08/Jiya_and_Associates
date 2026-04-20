@@ -21,10 +21,14 @@ export default function ServicesPage() {
       {/* Hero band — Option 6: Horizontal Lines Grid */}
       <div className="relative bg-navy pt-32 pb-16 px-6 overflow-hidden">
         {/* Grid lines */}
-        <div className="absolute inset-0" style={{
-          backgroundImage: "linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }} />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)`,
+            backgroundSize: "80px 80px",
+          }}
+        />
         {/* Directional gold glow */}
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%)" }} />
 

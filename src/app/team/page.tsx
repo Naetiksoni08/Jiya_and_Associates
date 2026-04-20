@@ -68,48 +68,40 @@ export default function TeamRoster() {
               <motion.div
                 key={member.slug}
                 {...fadeUp(i * 0.08)}
-                className="group relative bg-cream border border-navy/8 overflow-hidden
-                           hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="group"
               >
                 {/* Photo area */}
-                <div className="relative w-full aspect-[3/4] bg-[#e4ddd2] overflow-hidden">
+                <div className="relative overflow-hidden" style={{ height: "340px", backgroundColor: "#E8E2D9" }}>
                   {member.photo ? (
                     <Image
                       src={member.photo}
                       alt={member.name}
                       fill
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
                       <User size={40} className="text-[#b8a88c]" />
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/40 transition-all duration-300" />
                 </div>
 
                 {/* Info */}
-                <div className="p-3">
-                  <h2 className="font-serif text-sm text-navy font-bold mb-0.5 group-hover:text-gold transition-colors duration-200 leading-snug">
+                <div className="pt-4 pb-5">
+                  <h2 className="font-serif text-xl font-semibold text-navy leading-tight mb-1">
                     {member.name}
                   </h2>
-                  <p className="text-navy/45 text-[9px] tracking-wide uppercase font-semibold mb-3">
+                  <p className="text-xs font-bold tracking-[0.15em] uppercase mb-4 text-gold">
                     {member.designation}
                   </p>
-
-                  {/* View Profile button */}
                   <Link
                     href={`/team/${member.slug}`}
-                    className="inline-flex items-center gap-1.5 border border-gold text-navy text-[9px] font-semibold tracking-widest uppercase px-3 py-1.5
-                               hover:bg-gold hover:text-navy transition-all duration-200 group/btn"
+                    className="inline-flex items-center gap-1.5 text-xs tracking-wide uppercase border px-4 py-2 border-navy/25 text-navy hover:border-gold hover:text-gold transition-colors duration-200"
                   >
-                    View Profile
-                    <ArrowRight size={10} className="transition-transform duration-200 group-hover/btn:translate-x-0.5" />
+                    View Profile <ArrowRight size={11} />
                   </Link>
                 </div>
-
-                {/* Gold bottom accent */}
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </motion.div>
             ))}
           </div>

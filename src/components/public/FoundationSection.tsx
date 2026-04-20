@@ -51,8 +51,6 @@ export default function FoundationSection() {
           actionable insights, ensuring that our clients navigate even the most complex legal and
           regulatory challenges with confidence, ensuring desired results.
         </motion.p>
-
-
       </div>
     </section>
   );
