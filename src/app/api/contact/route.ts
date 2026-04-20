@@ -15,6 +15,9 @@ const contactSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
+const escapeHtml = (s: string) =>
+  s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -42,11 +45,11 @@ export async function POST(request: NextRequest) {
         subject: `New Enquiry from ${name}`,
         html: `
           <h2>New Lead — Jiya &amp; Associates</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
           <p><strong>Message:</strong></p>
-          <p>${message.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</p>
+          <p>${escapeHtml(message)}</p>
         `,
       });
     } catch (emailError) {
