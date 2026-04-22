@@ -1,6 +1,6 @@
 "use client";
 
-import { Clock, ArrowUp } from "lucide-react";
+import { Clock, ArrowUp, Linkedin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -46,6 +46,12 @@ export default function Footer() {
               <p className="text-cream/55 text-base leading-loose max-w-md text-justify">
                 Approaching legal advisory with structure and intent — bringing clarity to regulatory and transactional complexities, and guiding decisions with precision and foresight, to ensure outcomes that are both practical and sound.
               </p>
+              <div className="flex items-center gap-3 mt-6">
+                <a href="#" aria-label="LinkedIn"
+                  className="w-10 h-10 border border-white/15 flex items-center justify-center hover:border-accent-gold hover:text-accent-gold transition-colors duration-300">
+                  <Linkedin className="w-4 h-4" />
+                </a>
+              </div>
             </motion.div>
 
             {/* Quick Links */}
@@ -57,6 +63,7 @@ export default function Footer() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
               className=""
             >
+              
               <h4 className="font-semibold text-sm tracking-widest uppercase text-gold mb-4">
                 Quick Links
               </h4>
