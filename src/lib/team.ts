@@ -10,6 +10,7 @@ export interface TeamMember {
   designation: string;
   tagline: string;
   photo?: string;
+  practice?: string[];
   bio: string[];
   experience?: ExperienceItem[];
   practiceSection?: {
@@ -25,8 +26,9 @@ export const team: TeamMember[] = [
     slug: "founder",
     name: "Ravi Prakash Verma",
     designation: "Founder & Managing Partner",
-    tagline: "25+ years across tax advisory, regulatory strategy and institutional compliance.",
+    tagline: "Advocate, Bar Council of India",
     photo: "/images/team/founder.JPG.jpeg",
+    practice: ["Tax Advisory", "Regulatory Strategy", "Cross-Border Structuring", "Institutional Compliance"],
     bio: [
       "Ravi Prakash Verma is the Founder of Jiya & Associates and brings over two decades of experience in tax advisory, regulatory strategy and institutional compliance. His practice has been shaped by long-standing client relationships and a consistent track record of advising on complex, high-value matters across sectors.",
       "He is regularly engaged by multinational corporations, Indian enterprises and financial institutions on issues involving tax structuring, cross-border positioning, regulatory approvals and ongoing compliance. His advisory is marked by clarity of approach, commercial awareness and the ability to anticipate regulatory exposure before it materialises.",
@@ -97,39 +99,60 @@ export const team: TeamMember[] = [
   {
     slug: "litigation-head",
     name: "Keshav Soni",
-    designation: "Head of Disputes & Litigation",
-    tagline: "Civil, commercial and criminal litigation across courts, tribunals and appellate forums.",
-    photo: undefined,
+    designation: "Head of Litigation & Disputes",
+    tagline: "Advocate, Bar Council of India",
+    photo: "/images/team/litigation.jpg.jpeg",
+    practice: ["Civil Litigation", "Commercial Disputes", "Criminal Law", "Appellate Practice"],
     bio: [
-      "Keshav Soni heads the disputes and litigation practice, overseeing representation across civil, commercial and criminal proceedings before courts and tribunals. His role involves advising on dispute strategy, managing ongoing litigation and ensuring that matters are conducted with consistency, structure and clear direction.",
-      "His experience includes handling commercial and financial disputes, recovery actions, cheque dishonour proceedings and regulatory matters, with appearances before the Supreme Court of India, High Courts and trial courts. He is regularly engaged at different stages of litigation, including matters requiring immediate intervention and strategic course correction.",
-      "In addition to his role within the firm, he is independently involved in a litigation-focused practice, bringing a more execution-driven and court-centric perspective to dispute handling, closely integrated with the firm's established advisory and regulatory framework.",
+      "Keshav Soni heads the disputes and litigation practice, leading strategy and execution across civil, commercial and criminal proceedings before courts and tribunals. His role is centred on structuring disputes from the outset—identifying leverage, assessing risk and driving matters with clarity, control and a defined objective.",
+      "His experience includes handling commercial and financial disputes, recovery actions, cheque dishonour proceedings and regulatory matters, with appearances before the Supreme Court of India, High Courts and trial courts. He is regularly engaged at critical stages of litigation, particularly in matters requiring immediate intervention, strategic positioning and course correction.",
+      "In addition to his role within the firm, he leads a dedicated litigation practice through Stratum Juris, bringing an execution-driven and courtroom-focused approach to dispute handling, closely aligned with the firm's advisory and regulatory framework.",
     ],
     practiceSection: {
-      label: "Dispute Practice",
+      label: "Disputes Practice",
       title: "Scope of Practice",
-      para: "He handles a wide range of disputes including commercial and financial litigation, recovery actions, cheque dishonour matters and regulatory proceedings, with experience across courts, tribunals and appellate forums. His work often involves coordinating strategy across multiple proceedings to ensure consistency in position and outcome.",
+      para: "He handles a wide range of disputes including commercial litigation, corporate and shareholder conflicts, financial recovery, cheque dishonour matters and regulatory proceedings. His work extends to insolvency and restructuring matters before the NCLT and NCLAT, banking and recovery proceedings before the DRT and DRAT, as well as criminal and economic offence matters including proceedings under the Prevention of Money Laundering Act and cases involving investigative agencies. His approach involves structuring litigation strategy, coordinating proceedings across forums and maintaining consistency in legal position, with a clear focus on enforceability and outcome.",
     },
     standing:
-      "His practice is defined by a results-oriented approach to litigation, with a clear focus on securing commercially and legally effective outcomes for clients. He is routinely entrusted with matters requiring decisive strategy, sustained control and the ability to respond to evolving proceedings across forums. His involvement reflects a consistent emphasis on client objectives, ensuring that disputes are not only managed efficiently but driven towards resolution with clarity, precision and accountability.",
+      "His practice is defined by a structured and results-oriented approach to litigation, with emphasis on precision, procedural control and decisive execution. He is routinely engaged in matters requiring sustained strategy and close handling across stages, ensuring that disputes are not only mafectively but driven towards resolution with clarity, discipline and accountability.",
   },
   {
     slug: "associate-1",
-    name: "Associate Name",
-    designation: "Senior Associate",
-    tagline: "Corporate advisory, regulatory compliance and transactional support across key practice areas.",
-    photo: undefined,
-    bio: ["Bio coming soon."],
-    standing: "Details to be updated.",
+    name: "Ashwani Gaur",
+    designation: "Consultant — Taxation & Compliance",
+    tagline: "CA, Institute of Charted Accountant of India",
+    photo: "/images/team/ashvani.png",
+    practice: ["Direct Tax Advisory", "Assessment & Appellate", "Statutory Audits", "Regulatory Compliance"],
+    bio: [
+      "CA Ashwani Gaur is associated with the firm as a Consultant in taxation and compliance, advising on direct tax, audit and regulatory matters. His role involves providing strategic inputs on tax position, supporting compliance frameworks and assisting in representation before tax authorities, ensuring that matters are handled with clarity, structure and procedural discipline.",
+      "He brings extensive experience under the Income-tax Act, 1961, with regular involvement in assessment and appellate proceedings. He has been engaged in handling matters involving search and seizure proceedings, along with representation before authorities at various stages. His work also extends to advisory under the Companies Act and the erstwhile GST regime, with a focus on aligning regulatory requirements with business operations.",
+      "In addition to his association with the firm, he leads his independent practice, Gaur Gaur & Associates, and brings that experience into his advisory role, contributing a grounded and execution-focused perspective to taxation and compliance matters where required.",
+    ],
+    practiceSection: {
+      label: "Taxation & Compliance Practice",
+      title: "Scope of Practice",
+      para: "He handles a wide range of matters including income-tax advisory, assessment and appellate representation, tax structuring and regulatory compliance. His work includes execution of Special Audits under Section 142(2A), statutory audits, tax audits, internal audits and management audits, along with handling matters involving search and seizure proceedings. His approach is centred on accuracy, preparedness and consistency in financial and regulatory positioning.",
+    },
+    standing:
+      "His practice is defined by a methodical and detail-oriented approach to taxation and compliance, with a clear focus on managing exposure and maintaining regulatory discipline. His involvement brings experience and stability to matters requiring careful handling of financial and statutory positions, ensuring that clients are supported with clarity, precision and reliability.",
   },
   {
     slug: "associate-2",
-    name: "Associate Name",
-    designation: "Associate",
-    tagline: "Intellectual property, trademark filings and regulatory licensing support.",
+    name: "DR. KETAN GUPTA",
+    designation: "Consultant — Regulatory Advisory",
+    tagline: "FCA, Institute of Charted Accountant of India",
     photo: undefined,
-    bio: ["Bio coming soon."],
-    standing: "Details to be updated.",
+    bio: [
+      "CA Dr. Ketan Gupta is associated with the firm in the area of indirect taxation and advisory, with a focus on Goods and Services Tax (GST), management consultancy and risk assessment. His role involves assisting in analysing tax implications, supporting compliance processes and contributing to advisory on evolving regulatory requirements.",
+      "He brings experience in handling GST-related matters, including advisory, compliance support and interpretation of indirect tax provisions. His work is directed towards identifying risk areas, streamlining compliance and assisting clients in adapting to regulatory changes in a structured manner.",
+      "He holds a doctorate in Finance with a focus on GST, which strengthens his analytical approach to indirect taxation and enables him to contribute to technically nuanced matters.",
+    ],
+    practiceSection: {
+      label: "Tax & Advisory Practice",
+      title: "Scope of Practice",
+      para: "His practice is centred on indirect taxation, particularly GST, along with involvement in management consultancy and corporate advisory assignments. He works on identifying compliance gaps, assisting in structuring processes and supporting implementation across business operations.",
+    },
+    standing: "His work reflects a detail-oriented and analytical approach, with emphasis on technical accuracy and practical application. He contributes to advisory matters requiring structured evaluation and consistent execution, supporting the firm’s broader tax and compliance practice.",
   },
 ];
 

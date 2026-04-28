@@ -64,6 +64,7 @@ export default function Footer() {
               className=""
             >
               
+              
               <h4 className="font-semibold text-sm tracking-widest uppercase text-gold mb-4">
                 Quick Links
               </h4>

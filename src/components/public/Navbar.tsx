@@ -10,8 +10,8 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Our Team", href: "/team" },
   { label: "Expertise", href: "/services" },
+  { label: "Our Team", href: "/team" },
 ];
 
 export default function Navbar() {
@@ -89,7 +89,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className={cn(
-                    "relative text-[11px] font-semibold tracking-[0.2em] uppercase transition-colors duration-200 hover:text-gold group pb-0.5 px-4",
+                    "relative text-[11px] font-medium tracking-[0.14em] uppercase transition-colors duration-200 hover:text-gold group pb-0.5 px-4",
                     solid ? "text-navy" : "text-cream"
                   )}
                 >
@@ -111,7 +111,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             className={cn(
-              "ml-4 px-5 py-2 text-[11px] font-semibold tracking-[0.15em] uppercase transition-all duration-300 rounded-md",
+              "ml-4 px-5 py-2 text-[11px] font-medium tracking-[0.12em] uppercase transition-all duration-300 rounded-md",
               solid
                 ? "bg-gold text-navy hover:bg-gold-dark"
                 : "border border-gold text-cream hover:bg-gold hover:text-navy"
@@ -168,7 +168,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block text-navy text-[11px] font-semibold tracking-[0.18em] uppercase py-4 hover:text-gold border-b border-gray-100 transition-colors"
+                className="block text-navy text-[11px] font-medium tracking-[0.14em] uppercase py-4 hover:text-gold border-b border-gray-100 transition-colors"
               >
                 {link.label}
               </Link>
@@ -179,7 +179,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="block bg-gold text-navy text-center py-4 text-[11px] font-semibold tracking-[0.18em] uppercase hover:bg-gold-dark transition-colors rounded-md"
+              className="block bg-gold text-navy text-center py-4 text-[11px] font-medium tracking-[0.14em] uppercase hover:bg-gold-dark transition-colors rounded-md"
             >
               Contact Us
             </Link>

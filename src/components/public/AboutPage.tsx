@@ -39,7 +39,7 @@ export default function AboutPage() {
           <motion.p {...fadeUp(0)} className="text-gold text-xs font-semibold tracking-[0.3em] uppercase mb-4">
             About Us
           </motion.p>
-          <motion.h1 {...fadeUp(0.1)} className="font-sans font-bold text-4xl md:text-5xl text-white leading-tight tracking-tight mb-8">
+          <motion.h1 {...fadeUp(0.1)} className="font-luxury font-bold text-4xl md:text-5xl text-white leading-tight tracking-tight mb-8">
             A Practice Built on
             <br />
             <span className="text-gold">Continuity &amp; Trust</span>

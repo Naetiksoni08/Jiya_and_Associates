@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email"),
-  phone: z.string().min(7, "Please enter a valid phone number"),
+  phone: z.string().regex(/^\d{10}$/, "Please enter a valid 10-digit phone number"),
   nature: z.string().min(1, "Please select the nature of matter"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
