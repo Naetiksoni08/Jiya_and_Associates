@@ -141,7 +141,7 @@ export const team: TeamMember[] = [
     name: "DR. KETAN GUPTA",
     designation: "Consultant — Regulatory Advisory",
     tagline: "FCA, Institute of Charted Accountant of India",
-    photo: undefined,
+    photo: "/images/team/ketan.png",
     bio: [
       "CA Dr. Ketan Gupta is associated with the firm in the area of indirect taxation and advisory, with a focus on Goods and Services Tax (GST), management consultancy and risk assessment. His role involves assisting in analysing tax implications, supporting compliance processes and contributing to advisory on evolving regulatory requirements.",
       "He brings experience in handling GST-related matters, including advisory, compliance support and interpretation of indirect tax provisions. His work is directed towards identifying risk areas, streamlining compliance and assisting clients in adapting to regulatory changes in a structured manner.",
