@@ -24,27 +24,34 @@ export default function MemberProfilePage({ params }: { params: { slug: string }
   const member = getMemberBySlug(params.slug);
   if (!member) notFound();
 
-  const navLinks = [
-    { label: "Professional Background", href: "#profile" },
-    ...(member.experience?.length
-      ? [{ label: "Representative Experience & Clientele", href: "#experience" }]
-      : []),
-    ...(member.practiceSection
-      ? [{ label: member.practiceSection.title, href: "#practice" }]
-      : []),
-    { label: "Approach & Commitment", href: "#standing" },
-  ];
+  const showFounderHeroTags = member.slug === "founder";
+  const scopeHref = member.experience?.length
+    ? "#experience"
+    : member.practiceSection
+      ? "#practice"
+      : "#profile";
+  const navLinks = showFounderHeroTags
+    ? [
+        { label: "Professional Background", href: "#profile" },
+        { label: "Representative Clientele", href: scopeHref },
+        { label: "Approach & Commitment", href: "#standing" },
+      ]
+    : [];
 
   return (
     <main>
       <Navbar />
 
       {/* ── Hero: Option A — Dark Split ── */}
-      <section className="flex flex-col sm:flex-row overflow-hidden sm:min-h-[560px] pt-28 sm:pt-20" style={{ background: "#0f1c2e" }}>
+      <section className="flex flex-col sm:flex-row overflow-hidden relative sm:min-h-[560px] pt-28 sm:pt-20" style={{ background: "#0f1c2e" }}>
 
         {/* Photo — full width on mobile, 38% on desktop */}
         <div
-          className="w-full sm:w-[38%] flex-shrink-0 relative h-[320px] sm:h-auto"
+          className={
+            member.slug === "founder"
+              ? "w-[88%] max-w-[320px] mx-auto sm:mx-0 sm:max-w-none sm:w-[38%] flex-shrink-0 relative h-[320px] sm:h-auto"
+              : "w-[88%] max-w-[320px] mx-auto sm:mx-0 sm:max-w-none sm:w-[38%] flex-shrink-0 relative h-[320px] sm:h-auto"
+          }
           style={{ background: "#0f1c2e" }}
         >
           {member.photo ? (
@@ -52,11 +59,11 @@ export default function MemberProfilePage({ params }: { params: { slug: string }
               src={member.photo}
               alt={member.name}
               fill
-              className={`object-contain object-bottom sm:object-contain sm:object-bottom ${
+              className={
                 member.slug === "associate-1"
-                  ? "scale-[0.95] sm:scale-100"
-                  : ""
-              }`}
+                  ? "object-cover object-top sm:object-cover sm:object-top"
+                  : "object-contain object-bottom sm:object-contain sm:object-bottom"
+              }
               priority
             />
           ) : (
@@ -67,15 +74,17 @@ export default function MemberProfilePage({ params }: { params: { slug: string }
           <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to right, #0f1c2e 12%, transparent 10%, transparent 90%, #0f1c2e 90%)" }} />
           <div className="absolute inset-x-0 bottom-0 h-16 sm:hidden pointer-events-none" style={{ background: "linear-gradient(to bottom, transparent, #0f1c2e)" }} />
           {/* OUR TEAM link — mobile only, overlaid bottom-left of image */}
-          <Link
-            href="/team"
-            className="sm:hidden absolute top-4 left-4 inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase z-10"
-            style={{ color: "#B8973A" }}
-          >
-            <ArrowLeft className="w-3.5 h-3.5" />
-            Our Team
-          </Link>
         </div>
+
+        <Link
+          href="/team"
+          className="sm:hidden absolute top-[7.5rem] left-3 inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase z-10"
+          style={{ color: "#B8973A" }}
+        >
+          <ArrowLeft className="w-3.5 h-3.5" />
+          Our Team
+        </Link>
+
 
         {/* Content */}
         <div className="flex-1 flex flex-col justify-center items-center sm:items-start px-8 sm:px-12 lg:px-16 pt-6 sm:pt-32 pb-12 sm:pb-16 text-center sm:text-left" style={{ background: "#0f1c2e" }}>
@@ -108,7 +117,7 @@ export default function MemberProfilePage({ params }: { params: { slug: string }
           </p>
 
           {/* Section nav tags */}
-          <PracticeTags links={navLinks} />
+          {showFounderHeroTags ? <PracticeTags links={navLinks} /> : null}
         </div>
       </section>
 

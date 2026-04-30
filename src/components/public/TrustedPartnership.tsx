@@ -46,7 +46,7 @@ export default function TrustedPartnership() {
           <p className="font-inter text-white/60 text-base leading-relaxed">
             Legal matters often require both strategic advisory and effective dispute resolution. Jiya &amp; Associates operates in structured alignment with its associated litigation practice. This ensures continuity from legal advice to courtroom representation. Clients benefit from a seamless and coordinated legal approach.
           </p>
-          <p className="text-[#B8973A] font-luxury font-bold whitespace-nowrap text-base">
+          <p className="text-[#B8973A] font-luxury font-bold whitespace-nowrap text-lg md:text-xl">
             STRATUM JURIS — ADVOCATES &amp; SOLICITORS
           </p>
           <p className="font-inter text-white/60 text-base leading-relaxed">

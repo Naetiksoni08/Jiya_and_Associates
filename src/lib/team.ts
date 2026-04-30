@@ -120,7 +120,7 @@ export const team: TeamMember[] = [
     slug: "associate-1",
     name: "Ashwani Gaur",
     designation: "Consultant — Taxation & Compliance",
-    tagline: "CA, Institute of Charted Accountant of India",
+    tagline: "CA, Institute of Chartered Accountants of India",
     photo: "/images/team/ashvani.png",
     practice: ["Direct Tax Advisory", "Assessment & Appellate", "Statutory Audits", "Regulatory Compliance"],
     bio: [
@@ -140,7 +140,7 @@ export const team: TeamMember[] = [
     slug: "associate-2",
     name: "DR. KETAN GUPTA",
     designation: "Consultant — Regulatory Advisory",
-    tagline: "FCA, Institute of Charted Accountant of India",
+    tagline: "FCA, Institute of Chartered Accountants of India",
     photo: "/images/team/ketan.png",
     bio: [
       "CA Dr. Ketan Gupta is associated with the firm in the area of indirect taxation and advisory, with a focus on Goods and Services Tax (GST), management consultancy and risk assessment. His role involves assisting in analysing tax implications, supporting compliance processes and contributing to advisory on evolving regulatory requirements.",

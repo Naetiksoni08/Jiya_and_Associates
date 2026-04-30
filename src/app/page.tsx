@@ -15,9 +15,9 @@ export default function HomePage() {
     <main>
       <Navbar />
       <HeroSection />
-      <ClientBelt />
       <AboutSnippet />
       <PracticeAreas />
+      <ClientBelt />
       <FoundationSection />
       <AboutSection />
       <ClientTestimonials />
