@@ -15,6 +15,10 @@ const nextConfig = {
             key: "Cache-Control",
             value: "no-store, no-cache, must-revalidate",
           },
+          {
+            key: "x-vercel-enable-rewrite-caching",
+            value: "0",
+          },
         ],
       },
     ];
