@@ -5,14 +5,23 @@ import { NextRequest, NextResponse } from "next/server";
 // happens in each API route (which runs in Node.js runtime).
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const ADMIN_PATH = process.env.ADMIN_PATH!;
 
-  // Maintenance mode — set MAINTENANCE_MODE=true in Vercel env vars to enable
-  if (process.env.MAINTENANCE_MODE === "true") {
-    if (pathname !== "/maintenance" && !pathname.startsWith(`/${ADMIN_PATH}`)) {
+  // ✅ Check maintenance FIRST, before anything that could throw
+  const isMaintenanceMode = process.env.MAINTENANCE_MODE === "true";
+  
+  if (isMaintenanceMode) {
+    const ADMIN_PATH = process.env.ADMIN_PATH ?? "";
+    if (
+      pathname !== "/maintenance" &&
+      !pathname.startsWith("/_next") &&
+      !(ADMIN_PATH && pathname.startsWith(`/${ADMIN_PATH}`))
+    ) {
       return NextResponse.redirect(new URL("/maintenance", request.url));
     }
+    return NextResponse.next();
   }
+
+  const ADMIN_PATH = process.env.ADMIN_PATH!;
 
   // Rule 1: /admin always returns 404
   if (pathname === "/admin" || pathname.startsWith("/admin/")) {
@@ -23,7 +32,6 @@ export function middleware(request: NextRequest) {
   if (pathname.startsWith(`/${ADMIN_PATH}`)) {
     const token = request.cookies.get("admin_token")?.value;
 
-    // Login page: let unauthenticated through, redirect authenticated to leads
     if (pathname === `/${ADMIN_PATH}/login`) {
       if (token) {
         return NextResponse.redirect(
@@ -33,7 +41,6 @@ export function middleware(request: NextRequest) {
       return NextResponse.next();
     }
 
-    // All other admin routes: redirect to login if no token
     if (!token) {
       return NextResponse.redirect(
         new URL(`/${ADMIN_PATH}/login?unauthorized=1`, request.url)
@@ -44,7 +51,6 @@ export function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
-// Run middleware on all routes except static files and Next.js internals
 export const config = {
   matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };
