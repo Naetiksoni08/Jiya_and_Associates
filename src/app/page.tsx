@@ -10,8 +10,12 @@ import ClientTestimonials from "@/components/public/ClientTestimonials";
 import TrustedPartnership from "@/components/public/TrustedPartnership";
 import ContactForm from "@/components/public/ContactForm";
 import Footer from "@/components/public/Footer";
+import { redirect } from "next/navigation";
 
 export default function HomePage() {
+  if (process.env.MAINTENANCE_MODE === "true") {
+    redirect("/maintenance");
+  }
   return (
     <main>
       <Navbar />
