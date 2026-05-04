@@ -14,7 +14,14 @@
 
   }
 
-  html, body {
+  @media screen and (min-resolution: 96dpi) and (max-resolution: 120dpi) {
+    html {
+      font-size: 15px;
+    }
+  }
+
+  html,
+  body {
     overflow-x: hidden;
     max-width: 100vw;
   }

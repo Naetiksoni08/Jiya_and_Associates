@@ -30,14 +30,14 @@ export default function HeroSection() {
 
           <motion.h1
             variants={item}
-            className="[font-family:var(--font-cormorant)] text-4xl sm:text-5xl md:text-7xl text-white font-extrabold leading-tight tracking-[0.05em] md:tracking-[0.1em] mb-6 drop-shadow-lg uppercase"
+            className="[font-family:var(--font-cormorant)] text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-7xl text-white font-extrabold leading-tight tracking-[0.05em] lg:tracking-[0.1em] mb-6 drop-shadow-lg uppercase"
           >
             Advisory. <span className="text-gold">Compliance.</span><br />Execution.
           </motion.h1>
 
           <motion.p
             variants={item}
-           className="[font-family:var(--font-sans)] text-white/80 text-base md:text-xl mb-10 leading-relaxed tracking-wide"
+           className="[font-family:var(--font-sans)] text-white/80 text-base md:text-lg lg:text-xl mb-8 leading-relaxed tracking-wide"
           >
             A Practice shaped by years of experience, addressing legal and
             regulatory requirements with consistency, clarity and an
