@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-gold opacity-70" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6">
-        <motion.div variants={container} initial="hidden" animate="show" className="max-w-2xl mx-auto md:mx-0 text-center md:text-left">
+        <motion.div variants={container} initial="hidden" animate="show" className="max-w-xl mx-auto md:mx-0 text-center md:text-left">
 
           <motion.h1
             variants={item}

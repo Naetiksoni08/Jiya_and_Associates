@@ -243,12 +243,12 @@ export default function ContactForm() {
                     defaultValue=""
                   >
                     <option value="" disabled>Select the type of legal matter</option>
-                    <option value="civil">Civil Litigation</option>
-                    <option value="criminal">Criminal Law</option>
-                    <option value="corporate">Corporate & Commercial</option>
-                    <option value="family">Family Law</option>
-                    <option value="property">Property & Real Estate</option>
-                    <option value="arbitration">Arbitration & Dispute Resolution</option>
+                    <option value="corporate-commercial">Corporate & Commercial Advisory</option>
+                    <option value="regulatory-compliance">Regulatory Compliance</option>
+                    <option value="tax-litigation">Tax Litigation & Advisory</option>
+                    <option value="intellectual-property">Intellectual Property Law</option>
+                    <option value="real-estate">Real Estate Advisory</option>
+                    <option value="licensing-approvals">Licensing & Approvals</option>
                     <option value="other">Other</option>
                   </select>
                   {errors.nature && <p className="text-red-500 text-xs mt-1">{errors.nature.message}</p>}
