@@ -86,16 +86,14 @@ export default function AboutSection() {
 
         {/* Header */}
         <p
-          className="text-gold text-xs md:text-sm font-semibold tracking-[0.3em] uppercase mb-4"
-        >
+          className="text-gold text-xs md:text-sm font-semibold tracking-[0.3em] uppercase mb-4 text-center md:text-left">
           In Practice
         </p>
         <h2
-          className="font-serif text-4xl md:text-5xl text-navy font-bold leading-tight mb-4"
-        >
+          className="font-serif text-3xl md:text-5xl text-navy font-bold leading-tight mb-4 text-center md:text-left">
           How Matters Are Handled
         </h2>
-        <div className="w-12 h-0.5 bg-gold mb-16" />
+        <div className="w-12 h-0.5 bg-gold mb-16 mx-auto md:mx-0" />
 
         {/* Steps */}
         <div>
@@ -103,14 +101,14 @@ export default function AboutSection() {
             <div
               key={step.heading}
               ref={(el) => { if (el) rowRefs.current[i] = el; }}
-              className="group grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 py-8 px-8 mb-4 bg-white/30 border-l-4 hover:border-l-7 border-gold shadow-sm hover:shadow-[0_8px_40px_-8px_rgba(201,168,76,0.35)] hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 ease-out cursor-default"
+              className="group grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 md:gap-8 py-6 md:py-8 px-6 md:px-8 mb-4 bg-white/30 border-l-4 border-gold shadow-sm active:shadow-[0_8px_40px_-8px_rgba(201,168,76,0.35)] hover:-translate-y-1 active:-translate-y-1 hover:scale-[1.02] active:scale-[1.02] transition-all duration-300 ease-out cursor-default"
               style={{ boxShadow: undefined }}
             >
               <h3 className="step-heading font-serif text-lg text-navy font-semibold leading-snug uppercase tracking-wide">
                 {step.heading}
               </h3>
 
-              <p className="step-body text-navy/65 text-base leading-relaxed text-justify">
+              <p className="step-body text-navy/65 text-base leading-relaxed">
                 {step.body}
               </p>
             </div>

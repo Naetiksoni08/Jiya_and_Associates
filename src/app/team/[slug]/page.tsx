@@ -5,7 +5,6 @@ import { ArrowLeft, User } from "lucide-react";
 import Navbar from "@/components/public/Navbar";
 import Footer from "@/components/public/Footer";
 import { getMemberBySlug, team } from "@/lib/team";
-import PracticeTags from "@/components/public/PracticeTags";
 
 export function generateStaticParams() {
   return team.map((m) => ({ slug: m.slug }));
@@ -24,19 +23,19 @@ export default function MemberProfilePage({ params }: { params: { slug: string }
   const member = getMemberBySlug(params.slug);
   if (!member) notFound();
 
-  const showFounderHeroTags = member.slug === "founder";
-  const scopeHref = member.experience?.length
-    ? "#experience"
-    : member.practiceSection
-      ? "#practice"
-      : "#profile";
-  const navLinks = showFounderHeroTags
-    ? [
-        { label: "Professional Background", href: "#profile" },
-        { label: "Representative Clientele", href: scopeHref },
-        { label: "Approach & Commitment", href: "#standing" },
-      ]
-    : [];
+  // const showFounderHeroTags = member.slug === "founder";
+  // const scopeHref = member.experience?.length
+  //   ? "#experience"
+  //   : member.practiceSection
+  //     ? "#practice"
+  //     : "#profile";
+  // const navLinks = showFounderHeroTags
+  //   ? [
+  //       { label: "Professional Background", href: "#profile" },
+  //       { label: "Representative Clientele", href: scopeHref },
+  //       { label: "Approach & Commitment", href: "#standing" },
+  //     ]
+  //   : [];
 
   return (
     <main>
@@ -78,11 +77,10 @@ export default function MemberProfilePage({ params }: { params: { slug: string }
 
         <Link
           href="/team"
-          className="sm:hidden absolute top-[7.5rem] left-3 inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase z-10"
+          className="sm:hidden absolute top-[7.5rem] left-3 z-10 w-8 h-8 flex items-center justify-center border border-[#B8973A]/50 rounded-full"
           style={{ color: "#B8973A" }}
         >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          Our Team
+          <ArrowLeft className="w-4 h-4" />
         </Link>
 
 
@@ -116,8 +114,6 @@ export default function MemberProfilePage({ params }: { params: { slug: string }
             {member.tagline}
           </p>
 
-          {/* Section nav tags */}
-          {showFounderHeroTags ? <PracticeTags links={navLinks} /> : null}
         </div>
       </section>
 
@@ -162,10 +158,10 @@ export default function MemberProfilePage({ params }: { params: { slug: string }
                     </span>
                     <div className="flex-1 h-px bg-navy/10" />
                   </div>
-                  <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+                  <div className="grid grid-cols-2 md:flex md:flex-wrap justify-items-center justify-center items-center gap-6 md:gap-16">
                     {item.clients.map((client) =>
                       client.logo ? (
-                        <div key={client.name} className="flex items-center justify-center w-40 h-24 rounded-2xl overflow-hidden">
+                        <div key={client.name} className="flex items-center justify-center w-full h-20 md:w-40 md:h-24 rounded-2xl overflow-hidden">
                           <img src={client.logo} alt={client.name} className="max-h-full max-w-full object-contain" />
                         </div>
                       ) : (

@@ -38,14 +38,13 @@ const row2 = [
 
 function TestimonialCard({ text }: { text: string }) {
   return (
-    <div className="w-80 shrink-0 border border-gray-100 bg-white p-7 shadow-sm flex flex-col">
-      <span className="block font-serif text-7xl text-gold leading-none mb-2">&ldquo;</span>
-      <p className="text-navy/65 text-sm leading-relaxed flex-1">{text}</p>
-      <span className="block font-serif text-7xl text-gold leading-none text-right mt-2">&rdquo;</span>
+    <div className="w-[72vw] sm:w-80 shrink-0 border border-gray-100 bg-white p-4 sm:p-7 shadow-sm flex flex-col">
+      <span className="block font-serif text-5xl sm:text-7xl text-gold leading-none mb-2">&ldquo;</span>
+      <p className="text-navy/65 text-xs sm:text-sm leading-relaxed flex-1">{text}</p>
+      <span className="block font-serif text-5xl sm:text-7xl text-gold leading-none text-right mt-2">&rdquo;</span>
     </div>
   );
 }
-
 export default function ClientTestimonials() {
   return (
     <section className="bg-white py-16 border-y border-gray-100">

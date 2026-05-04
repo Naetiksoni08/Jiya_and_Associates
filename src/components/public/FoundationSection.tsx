@@ -42,7 +42,7 @@ export default function FoundationSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.15 }}
           transition={{ duration: 0.65, ease: "easeOut", delay: 0.1 }}
-          className="text-white/90 text-base md:text-lg leading-relaxed mb-20 text-justify"
+          className="text-white/90 text-base md:text-lg leading-relaxed mb-20 text-center"
           style={{ textAlignLast: "center" }}
         >
           At Jiya &amp; Associates, every case we handle is backed by years of accumulated expertise.

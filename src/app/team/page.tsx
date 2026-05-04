@@ -23,15 +23,15 @@ export default function TeamRoster() {
       >
         <div
           className="absolute inset-0"
-          style={{ background: "linear-gradient(to right, rgba(10,22,40,0.82) 55%, rgba(10,22,40,0.40))" }}
+          style={{ background: "linear-gradient(to right, rgba(10,22,40,0.70) 45%, rgba(10,22,40,0.25))" }}
         />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl text-center md:text-left mx-auto md:mx-0">
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="font-sans text-sm font-semibold tracking-[0.2em] uppercase mb-3"
-              style={{ color: "#B8973A" }}
+              className="font-sans text-md font-bold tracking-[0.2em] uppercase mb-3"
+              style={{ color: "#D4A843" }}
             >
               The People Behind the Practice
             </motion.p>
@@ -43,12 +43,12 @@ export default function TeamRoster() {
             >
               Our Team
             </motion.h1>
-            <div className="w-10 h-[2px] mb-8" style={{ background: "#B8973A" }} />
+            <div className="w-10 h-[2px] mb-8 mx-auto md:mx-0" style={{ background: "#B8973A" }} />
             <div className="space-y-5">
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="font-sans text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.75)" }}>
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="font-sans text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.95)" }}>
                 Jiya &amp; Associates is led by practitioners with long-standing experience across corporate, taxation, intellectual property and litigation matters.
               </motion.p>
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="font-sans text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.75)" }}>
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="font-sans text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.95)" }}>
                 Each member of the team brings a focused area of expertise, enabling the firm to handle matters with both depth and continuity. The team's collective experience spans advisory, compliance, taxation, dispute resolution and regulatory representation across forums.
               </motion.p>
             </div>
@@ -64,10 +64,10 @@ export default function TeamRoster() {
           {founder && (
             <Link href={`/team/${founder.slug}`}>
               <motion.div
-                initial={{ opacity: 0, y: 25 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
                 className="flex flex-col sm:flex-row gap-0 border border-gray-200 cursor-pointer hover:shadow-lg transition-shadow duration-300"
               >
                 {/* Image */}
@@ -90,7 +90,7 @@ export default function TeamRoster() {
 
                 {/* Content */}
                 <div className="flex flex-col justify-center px-6 py-8 sm:px-8 lg:px-12">
-                  <p className="font-sans text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: "#B8973A" }}>
+                  <p className="font-sans text-xs font-bold tracking-[0.2em] uppercase mb-3" style={{ color: "#B8973A" }}>
                     {founder.designation}
                   </p>
                   <h2 className="font-luxury text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#0a1628] leading-tight mb-4">
@@ -111,16 +111,16 @@ export default function TeamRoster() {
           {/* Team Members Grid */}
           <div>
             <p className="font-sans text-xs font-semibold tracking-[0.22em] uppercase mb-8" style={{ color: "#B8973A" }}>
-              Team Members
+              OUR PEOPLE
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {rest.map((member, index) => (
                 <Link href={`/team/${member.slug}`} key={member.slug}>
                   <motion.div
-                    initial={{ opacity: 0, y: 25 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -80 : 80 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.08 }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.08 }}
                     className="group border border-gray-200 flex flex-col h-full cursor-pointer hover:shadow-lg transition-shadow duration-300"
                   >
                     {/* Image */}
@@ -145,7 +145,7 @@ export default function TeamRoster() {
                       <h3 className="font-luxury text-xl font-semibold text-[#0a1628] leading-tight mb-1">
                         {member.name}
                       </h3>
-                      <p className="font-sans text-xs tracking-[0.15em] uppercase mb-4" style={{ color: "#B8973A" }}>
+                      <p className="font-sans text-xs tracking-[0.15em] uppercase mb-4 font-semibold" style={{ color: "#B8973A" }}>
                         {member.designation}
                       </p>
                       <div className="mt-auto">

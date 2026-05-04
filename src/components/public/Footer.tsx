@@ -43,7 +43,7 @@ export default function Footer() {
                 <Image src="/images/jiya.png" alt="Jiya & Associates" width={60} height={60} className="object-contain" />
                 <span className="font-serif text-2xl font-bold uppercase">Jiya &amp; Associates</span>
               </div>
-              <p className="text-cream/55 text-base leading-loose max-w-md text-justify">
+              <p className="text-cream/55 text-base leading-loose max-w-md">
                 Approaching legal advisory with structure and intent — bringing clarity to regulatory and transactional complexities, and guiding decisions with precision and foresight, to ensure outcomes that are both practical and sound.
               </p>
             </motion.div>
@@ -57,7 +57,6 @@ export default function Footer() {
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
               className=""
             >
-              
               
               <h4 className="font-semibold text-sm tracking-widest uppercase text-gold mb-4">
                 Quick Links

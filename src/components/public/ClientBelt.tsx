@@ -23,7 +23,7 @@ const logos: { name: string; src: string; scale?: string }[] = [
 export default function ClientBelt() {
   return (
     <div className="bg-white py-10 overflow-hidden border-y border-gray-100">
-      <p className="text-center text-xs tracking-[0.3em] uppercase text-gold font-semibold mb-8">
+      <p className="text-center text-xs tracking-[0.3em] uppercase text-gold font-bold mb-8">
         Clients &amp; Associations
       </p>
       <div className="relative flex">
@@ -31,17 +31,17 @@ export default function ClientBelt() {
         {[0, 1].map((copy) => (
           <div
             key={copy}
-            className="flex items-center gap-16 animate-marquee shrink-0"
+            className="flex items-center gap-8 md:gap-16 animate-marquee shrink-0"
             aria-hidden={copy === 1}
           >
             {logos.map((logo) => (
-              <div key={logo.name} className="flex items-center justify-center w-56 h-28">
+              <div key={logo.name} className="flex items-center justify-center w-36 md:w-56 h-20 md:h-28">
                 <Image
                   src={logo.src}
                   alt={logo.name}
                   width={220}
                   height={110}
-                  className="object-contain max-h-24 w-auto"
+                  className="object-contain max-h-20 md:max-h-24 w-auto"
                   style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
                 />
               </div>

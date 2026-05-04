@@ -23,18 +23,20 @@ export default function AboutPage() {
     <div className="bg-white">
 
       {/* Hero band — image background with split overlay */}
-      <div className="relative pt-40 pb-32 px-10 xl:px-20 overflow-hidden">
+      <div className="relative pt-32 pb-24 px-6 md:px-10 xl:px-20 overflow-hidden min-h-[60vh]">
         {/* Background image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat hidden md:block"
           style={{ backgroundImage: "url('/images/about.jpg')" }}
         />
+
         {/* Split overlay */}
         <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(rgba(5,10,20,0.72) 50%, rgba(5,10,20,0.10))" }}
+          className="absolute inset-0 hidden md:block"
+          style={{ background: "linear-gradient(180deg, rgba(5,10,20,0.85) 0%, rgba(5,10,20,0.75) 60%, rgba(5,10,20,0.50) 100%)" }}
         />
 
+        <div className="absolute inset-0 bg-[#060E1A] md:hidden" />
         <div className="relative z-10">
           <motion.p {...fadeUp(0)} className="text-gold text-xs font-semibold tracking-[0.3em] uppercase mb-4">
             About Us
@@ -44,13 +46,13 @@ export default function AboutPage() {
             <br />
             <span className="text-gold">Continuity &amp; Trust</span>
           </motion.h1>
-          <motion.p {...fadeUp(0.2)} className="text-white/90 text-base md:text-lg leading-relaxed text-justify">
+          <motion.p {...fadeUp(0.2)} className="text-white/90 text-base md:text-lg leading-relaxed">
             Jiya &amp; Associates reflects a long-standing legal practice built over years of continuous
             engagement across corporate, taxation, intellectual property and regulatory matters. The
             firm&apos;s work is shaped by sustained experience before various authorities and forums,
             allowing matters to be handled with familiarity, stability and informed judgment.
           </motion.p>
-          <motion.p {...fadeUp(0.3)} className="text-white/90 text-base md:text-lg leading-relaxed mt-5 text-justify">
+          <motion.p {...fadeUp(0.3)} className="text-white/90 text-base md:text-lg leading-relaxed mt-5">
             Clients approach the firm not only for legal input, but for guidance that is steady,
             dependable and aligned with their specific requirements. Over time, this has established a
             practice grounded in trust, continuity and a clear understanding of how legal and
@@ -69,11 +71,11 @@ export default function AboutPage() {
             Scope of Work
           </motion.h2>
           <motion.div {...fadeUp(0.15)} className="w-12 h-0.5 bg-gold mb-8" />
-          <motion.p {...fadeUp(0.2)} className="text-navy/65 text-base md:text-lg leading-relaxed mb-5 text-justify">
+          <motion.p {...fadeUp(0.2)} className="text-navy/65 text-base md:text-lg leading-relaxed mb-5">
             The firm advises and represents clients across corporate and commercial matters,
             regulatory compliance, taxation, intellectual property and real estate.
           </motion.p>
-          <motion.p {...fadeUp(0.3)} className="text-navy/65 text-base md:text-lg leading-relaxed text-justify">
+          <motion.p {...fadeUp(0.3)} className="text-navy/65 text-base md:text-lg leading-relaxed">
             Assignments are handled with an integrated perspective, ensuring that overlapping legal,
             financial and regulatory aspects are addressed cohesively. This allows for continuity in
             matters that extend across multiple areas, reducing fragmentation and maintaining clarity
@@ -118,7 +120,7 @@ export default function AboutPage() {
             25+ Years of Continued Practice
           </motion.h2>
           <motion.div {...fadeUp(0.15)} className="w-12 h-0.5 bg-gold mb-8" />
-          <motion.p {...fadeUp(0.2)} className="text-navy/65 text-base md:text-lg leading-relaxed text-justify">
+          <motion.p {...fadeUp(0.2)} className="text-navy/65 text-base md:text-lg leading-relaxed">
             With over 25 years of continued practice, the firm reflects a depth of experience
             developed through sustained engagement across legal and regulatory matters. This
             continuity allows for a steady and informed approach, enabling clients to rely on

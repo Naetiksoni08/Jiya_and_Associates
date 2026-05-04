@@ -22,10 +22,10 @@ export default function HomePage() {
       <HeroSection />
       <AboutSnippet />
       <PracticeAreas />
-      <ClientBelt />
       <FoundationSection />
       <AboutSection />
       <ClientTestimonials />
+      <ClientBelt />
       <TrustedPartnership />
       <ContactForm />
       <Footer />

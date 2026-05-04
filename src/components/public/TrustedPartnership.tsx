@@ -31,7 +31,7 @@ export default function TrustedPartnership() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-cormorant text-2xl md:text-4xl font-semibold text-white mb-6 leading-tight"
+          className="font-cormorant text-2xl md:text-3xl font-semibold text-white mb-6 leading-tight"
         >
           An Associated Advisory Practice
         </motion.h2>
@@ -46,7 +46,7 @@ export default function TrustedPartnership() {
           <p className="font-inter text-white/60 text-base leading-relaxed">
             Legal matters often require both strategic advisory and effective dispute resolution. Jiya &amp; Associates operates in structured alignment with its associated litigation practice. This ensures continuity from legal advice to courtroom representation. Clients benefit from a seamless and coordinated legal approach.
           </p>
-          <p className="text-[#B8973A] font-luxury font-bold whitespace-nowrap text-lg md:text-xl">
+          <p className="text-[#B8973A] [font-family:var(--font-cormorant)] font-bold text-lg md:text-xl text-center leading-snug tracking-[0.15em]">
             STRATUM JURIS — ADVOCATES &amp; SOLICITORS
           </p>
           <p className="font-inter text-white/60 text-base leading-relaxed">
@@ -66,7 +66,7 @@ export default function TrustedPartnership() {
             href="https://www.stratumjuris.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#B8973A] hover:bg-[#D4A853] font-bold text-black/80 font-inter text-xs tracking-[0.2em] uppercase px-10 py-4 transition-colors duration-300 rounded-lg"
+           className="inline-flex items-center gap-3 bg-[#B8973A] hover:bg-[#D4A853] font-semibold text-navy font-inter text-sm tracking-[0.08em] uppercase px-8 py-3.5 transition-colors duration-300 rounded-lg"
           >
             Visit Stratum Juris
             <ExternalLink className="w-3.5 h-3.5" />
