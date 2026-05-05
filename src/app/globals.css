@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @layer base {
   :root {
     --font-inter: var(--font-sans), system-ui, sans-serif;
@@ -13,7 +21,7 @@
     text-size-adjust: 100%;
 
   }
-  
+
   html,
   body {
     overflow-x: hidden;
