@@ -101,7 +101,7 @@ export const team: TeamMember[] = [
     name: "Keshav Soni",
     designation: "Head of Litigation & Disputes",
     tagline: "Advocate, Bar Council of India",
-    photo: "/images/team/litigation.jpg.jpeg",
+    photo: "/images/team/litigation.PNG",
     practice: ["Civil Litigation", "Commercial Disputes", "Criminal Law", "Appellate Practice"],
     bio: [
       "Keshav Soni heads the disputes and litigation practice, leading strategy and execution across civil, commercial and criminal proceedings before courts and tribunals. His role is centred on structuring disputes from the outset—identifying leverage, assessing risk and driving matters with clarity, control and a defined objective.",
