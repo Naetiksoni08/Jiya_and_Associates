@@ -89,8 +89,8 @@ export const metadata: Metadata = {
     apple: "/images/jiya.png",
   },
   openGraph: {
-    title: "Jiya & Associates | Legal Excellence",
-    description: "Advisory. Compliance. Execution. — A trusted law firm with decades of experience across tax, regulatory and dispute resolution.",
+    title: "Jiya & Associates | Legal & Compliance Experts",
+    description: "Jiya & Associates — a multidisciplinary legal and compliance practice advising on taxation, regulatory, commercial and dispute matters with strategic, business-focused legal solutions.",
     type: "website",
   },
 };
