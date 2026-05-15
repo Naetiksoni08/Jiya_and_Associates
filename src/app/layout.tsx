@@ -84,6 +84,9 @@ const cardo = Cardo({ subsets: ["latin"], weight: ["400", "700"], variable: "--f
 export const metadata: Metadata = {
   title: "Jiya & Associates | Legal & Compliance Experts",
   description: "Jiya & Associates — a multidisciplinary legal and compliance practice advising on taxation, regulatory, commercial and dispute matters with strategic, business-focused legal solutions.",
+  verification: {
+    google: "_TrqagIjarLxtCCZWFMNRV1I6IaGlGy2I-IopARl5bw",  // ← add this
+  },
   icons: {
     icon: "/images/jiya.png",
     apple: "/images/jiya.png",
