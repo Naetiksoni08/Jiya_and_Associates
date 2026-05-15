@@ -82,8 +82,8 @@ const bigShoulders = Big_Shoulders_Display({ subsets: ["latin"], weight: ["100",
 const cardo = Cardo({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-cardo" });
 
 export const metadata: Metadata = {
-  title: "Jiya & Associates | Legal Excellence",
-  description: "Jiya & Associates — a trusted law firm providing expert legal counsel in advisory, compliance, taxation, regulatory and litigation matters.",
+  title: "Jiya & Associates | Legal & Compliance Experts",
+  description: "Jiya & Associates — a multidisciplinary legal and compliance practice advising on taxation, regulatory, commercial and dispute matters with strategic, business-focused legal solutions.",
   icons: {
     icon: "/images/jiya.png",
     apple: "/images/jiya.png",
