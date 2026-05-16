@@ -105,6 +105,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${marcellus.variable} ${cormorant.variable} ${playfair.variable} ${libreBaskerville.variable} ${lato.variable} ${cinzel.variable} ${ebGaramond.variable} ${dmSerifDisplay.variable} ${spectral.variable} ${italiana.variable} ${bodoni.variable} ${josefinSans.variable} ${forum.variable} ${yesevaOne.variable} ${philosopher.variable} ${raleway.variable} ${jost.variable} ${bigShoulders.variable} ${cardo.variable}`}>
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FHZTC5V0L"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2FHZTC5V0L');
+          `
+        }}/>
+      </head>
       <body className="font-sans antialiased">
         <CustomCursor />
         <ScrollProgress />
