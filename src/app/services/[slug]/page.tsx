@@ -12,9 +12,63 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const service = getServiceBySlug(params.slug);
   if (!service) return {};
+
+  const keywordsMap: Record<string, string[]> = {
+    "corporate-commercial-advisory": [
+      "corporate lawyer Delhi",
+      "commercial contracts India",
+      "business structuring lawyer",
+      "joint venture agreement India",
+      "shareholders agreement lawyer Delhi",
+      "NDA drafting India",
+      "Companies Act lawyer India",
+    ],
+    "regulatory-compliance": [
+      "regulatory compliance lawyer India",
+      "statutory compliance Delhi",
+      "Companies Act compliance lawyer",
+      "compliance advisory India",
+      "regulatory filings lawyer Delhi",
+    ],
+    "tax-litigation-advisory": [
+      "tax litigation lawyer Delhi",
+      "GST lawyer India",
+      "income tax lawyer Delhi",
+      "ITAT lawyer India",
+      "DGGI lawyer",
+      "tax notice response lawyer Delhi",
+      "GST advisory India",
+    ],
+    "intellectual-property-law": [
+      "trademark registration India",
+      "trademark lawyer Delhi",
+      "IP lawyer India",
+      "brand registration lawyer",
+      "trademark objection reply India",
+      "logo registration India",
+    ],
+    "real-estate-advisory": [
+      "real estate lawyer Delhi",
+      "property lawyer India",
+      "RERA lawyer Delhi",
+      "title verification lawyer",
+      "property due diligence India",
+      "sale deed lawyer Delhi",
+    ],
+    "licensing-approvals": [
+      "licensing lawyer India",
+      "GST registration Delhi",
+      "FSSAI registration lawyer",
+      "business license India",
+      "MSME registration lawyer Delhi",
+      "trade license lawyer India",
+    ],
+  };
+
   return {
     title: `${service.title} | Jiya & Associates`,
     description: service.brief,
+    keywords: keywordsMap[params.slug] || [],
   };
 }
 

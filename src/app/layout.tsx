@@ -84,6 +84,18 @@ const cardo = Cardo({ subsets: ["latin"], weight: ["400", "700"], variable: "--f
 export const metadata: Metadata = {
   title: "Jiya & Associates | Legal & Compliance Experts",
   description: "Jiya & Associates — a multidisciplinary legal and compliance practice advising on taxation, regulatory, commercial and dispute matters with strategic, business-focused legal solutions.",
+  keywords: [
+    "Jiya and Associates",
+    "law firm Delhi",
+    "legal compliance experts India",
+    "tax lawyer Delhi",
+    "GST consultant India",
+    "corporate lawyer Delhi",
+    "trademark registration India",
+    "legal advisory India",
+    "regulatory compliance lawyer",
+    "Laxmi Nagar law firm",
+  ],
   verification: {
     google: "_TrqagIjarLxtCCZWFMNRV1I6IaGlGy2I-IopARl5bw",  // ← add this
   },
@@ -105,7 +117,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${montserrat.variable} ${marcellus.variable} ${cormorant.variable} ${playfair.variable} ${libreBaskerville.variable} ${lato.variable} ${cinzel.variable} ${ebGaramond.variable} ${dmSerifDisplay.variable} ${spectral.variable} ${italiana.variable} ${bodoni.variable} ${josefinSans.variable} ${forum.variable} ${yesevaOne.variable} ${philosopher.variable} ${raleway.variable} ${jost.variable} ${bigShoulders.variable} ${cardo.variable}`}>
-    <head>
+      <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FHZTC5V0L"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
@@ -114,7 +126,7 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-2FHZTC5V0L');
           `
-        }}/>
+        }} />
       </head>
       <body className="font-sans antialiased">
         <CustomCursor />

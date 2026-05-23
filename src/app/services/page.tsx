@@ -6,6 +6,18 @@ import { services } from "@/lib/services";
 export const metadata = {
   title: "Expertise | Jiya & Associates",
   description: "A focused range of legal and regulatory expertise — corporate law, taxation, GST, FEMA, IP, and dispute resolution.",
+  keywords: [
+    "legal services Delhi",
+    "law firm services India",
+    "corporate lawyer India",
+    "GST consultant Delhi",
+    "trademark registration lawyer India",
+    "real estate lawyer Delhi",
+    "regulatory compliance lawyer India",
+    "tax litigation lawyer Delhi",
+    "licensing approvals lawyer India",
+    "intellectual property lawyer Delhi",
+  ],
   openGraph: {
     title: "Our Expertise | Jiya & Associates",
     description: "Corporate law, taxation, GST, FEMA, IP and dispute resolution — expert legal counsel across key practice areas.",

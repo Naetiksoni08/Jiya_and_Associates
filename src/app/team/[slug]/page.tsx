@@ -13,9 +13,45 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const member = getMemberBySlug(params.slug);
   if (!member) return {};
+
+  const keywordsMap: Record<string, string[]> = {
+    "founder": [
+      "Ravi Prakash Verma advocate",
+      "tax lawyer Delhi",
+      "GST advisor India",
+      "corporate tax lawyer Delhi",
+      "regulatory lawyer India",
+      "cross border tax advisor India",
+      "founder Jiya and Associates",
+    ],
+    "litigation-head": [
+      "Keshav Soni advocate",
+      "litigation lawyer Delhi",
+      "civil litigation lawyer India",
+      "criminal lawyer Delhi",
+      "commercial dispute lawyer India",
+      "Stratum Juris founder",
+    ],
+    "associate-1": [
+      "Ashwani Gaur chartered accountant",
+      "CA tax consultant Delhi",
+      "income tax advisor India",
+      "statutory audit CA Delhi",
+      "direct tax lawyer India",
+    ],
+    "associate-2": [
+      "Dr Ketan Gupta CA",
+      "GST consultant India",
+      "indirect tax advisor Delhi",
+      "GST compliance expert India",
+      "management consultant Delhi",
+    ],
+  };
+
   return {
     title: `${member.name} | Jiya & Associates`,
     description: member.tagline,
+    keywords: keywordsMap[params.slug] || [],
   };
 }
 
